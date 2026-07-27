@@ -1,69 +1,134 @@
+// import "./login.css";
+// import "bootstrap-icons/font/bootstrap-icons.css";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext.jsx";
+import { useAuth } from "../AuthContext";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-export default function Login() {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
+  const [visible, setVisible] = useState(false);
 
-  async function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
-    setLoading(true);
-    try {
-      await login(email, password);
-      navigate("/chat");
-    } catch (err) {
-      setError(
-        err.response?.data?.message || "Could not sign in. Check your details.",
-      );
-    } finally {
-      setLoading(false);
+    const response = await fetch(
+      "https://ai-eng-app-ap-is.vercel.app/api/auth/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      },
+    );
+
+    const data = await response.json();
+    console.log(data);  
+
+    if (data.token) {
+      login(data.token);
+      navigate("/dashboard"); // Success, go to landing page
+      toast.success("You are logged in successfully.");
+    } else {
+      toast.error("Invalid Email and Password!");
     }
+  };
+
+  function handleEyeClick() {
+    setVisible((visible) => !visible);
   }
 
   return (
-    <div className="auth-page">
-      <div className="auth-card">
-        <p className="eyebrow">Marginal</p>
-        <h1>Welcome back</h1>
-        <p className="auth-sub">Pick up the conversation where you left off.</p>
+    <main>
+      <h2 className="textCenter workasana">Workasana</h2>
+      <div className="loginCon">
+        <h3 className="textCenter">Log in to your account</h3>
+        <p className="textCenter">Please enter your details</p>
 
-        <form onSubmit={handleSubmit} className="auth-form">
-          <label>
-            Email
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </label>
-          <label>
-            Password
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </label>
+        <div className="fields">
+          <form onSubmit={handleSubmit}>
+            <div className="inpField">
+              <label
+                htmlFor="em"
+                className="lable"
+                style={{ marginRight: "11rem" }}
+              >
+                Email
+              </label>
+              <br />
+              <input
+                type="email"
+                placeholder="Enter your Email"
+                id="em"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="inpFont"
+              />
+            </div>
 
-          {error && <p className="form-error">{error}</p>}
+            <div className="inpField">
+              <label htmlFor="pass" className="lable">
+                Password
+              </label>
+              <br />
+              <div className="password">
+                <input
+                  type={visible ? "text" : "password"}
+                  placeholder="Password"
+                  id="pass"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="inpFont"
+                />
+                <button
+                  type="button"
+                  onClick={handleEyeClick}
+                  className="eyeBtn"
+                >
+                  {visible ? (
+                    <i
+                      className="bi bi-eye"
+                      style={{
+                        position: "absolute",
+                        right: "0.1rem",
+                        margin: "0.1rem",
+                        bottom: "0.1rem",
+                      }}
+                    ></i>
+                  ) : (
+                    <i
+                      class="bi bi-eye-slash"
+                      style={{
+                        position: "absolute",
+                        right: "0.1rem",
+                        bottom: "0.1rem",
+                        margin: "0.1rem",
+                      }}
+                    ></i>
+                  )}
+                </button>
+              </div>
+            </div>
 
-          <button type="submit" className="btn-primary" disabled={loading}>
-            {loading ? "Signing in…" : "Sign in"}
-          </button>
-        </form>
+            <div className="btnCon">
+              <button className="btn" type="submit">
+                Sign in
+              </button>
+            </div>
 
-        <p className="auth-switch">
-          New here? <Link to="/register">Create an account</Link>
-        </p>
+            <Link to="/signup">
+              <p>Not registered? Sign up now.</p>
+            </Link>
+          </form>
+        </div>
       </div>
-    </div>
+    </main>
   );
-}
+};
+
+export default Login;

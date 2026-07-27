@@ -1,28 +1,16 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import { useAuth } from "./context/AuthContext.jsx";
-import Login from "./pages/Login.jsx";
-import Register from "./pages/Register.jsx";
-import Chat from "./pages/Chat.jsx";
+import { Routes, Route,  } from "react-router-dom";
+import Login from "./pages/login";
+import register from "./pages/register"; 
 
-function ProtectedRoute({ children }) {
-  const { user } = useAuth();
-  return user ? children : <Navigate to="/login" replace />;
+
+function Aap(){
+    return(
+        <>
+            <Routes>
+                <Route path="/" element={<Login/>}></Route>
+            </Routes>
+        </>
+    )
 }
 
-export default function App() {
-  return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route
-        path="/chat"
-        element={
-          <ProtectedRoute>
-            <Chat />
-          </ProtectedRoute>
-        }
-      />
-      <Route path="*" element={<Navigate to="/chat" replace />} />
-    </Routes>
-  );
-}
+export default App; 
