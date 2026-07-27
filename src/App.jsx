@@ -3,7 +3,7 @@ import Login from "./pages/login";
 import register from "./pages/register"; 
 
 
-function Aap(){
+function App(){
     return(
         <>
             <Routes>
