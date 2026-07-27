@@ -1,0 +1,89 @@
+.textCenter {
+    text-align: center;
+}
+
+
+.loginCon {
+    /* background-color: aliceblue; */
+    height: 20rem;
+    width: 100%;
+
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    /* border: 1px solid green; */
+    align-items: center;
+
+}
+
+/* .passContainer{
+    border: 1px solid green;
+    width: 
+
+} */
+
+.password {
+    position: relative;
+    /* display: inline-block; */
+    /* border: 1px solid green; */
+
+}
+
+label {
+    font-size: large;
+}
+
+input {
+    font-size: large;
+
+}
+
+/* .inpField { */
+/* border: 1px solid green;     */
+/* padding: 0.5rem; */
+/* display: flex; */
+/* flex-direction: column;  */
+/* gap : 0.1rem; */
+
+/* } */
+
+.lable {
+    margin-right: 9.3rem;
+}
+
+.btnCon {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 14rem;
+    font-size: large;
+    background-color: oklch(48.8% 0.243 264.376);
+    color: white;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: oklch(54.6% 0.245 262.881);
+}
+
+
+.eyeBtn {
+    border: 1px white;
+    background-color: white;
+    padding: 0.5rem;
+    position: absolute;
+    right: 4.9rem;
+    top: 0.4rem;
+}
+
+.inpFont {
+    font-size: 0.9rem;
+    width: 13.5rem;
+
+}

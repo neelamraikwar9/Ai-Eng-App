@@ -1,4 +1,4 @@
-// import "./login.css";
+import "./login.css";
 // import "bootstrap-icons/font/bootstrap-icons.css";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
@@ -32,7 +32,7 @@ const Login = () => {
 
     if (data.token) {
       login(data.token);
-      navigate("/dashboard"); // Success, go to landing page
+      navigate("/chat"); // Success, go to landing page
       toast.success("You are logged in successfully.");
     } else {
       toast.error("Invalid Email and Password!");
@@ -102,7 +102,7 @@ const Login = () => {
                     ></i>
                   ) : (
                     <i
-                      class="bi bi-eye-slash"
+                      className="bi bi-eye-slash"
                       style={{
                         position: "absolute",
                         right: "0.1rem",
@@ -121,7 +121,7 @@ const Login = () => {
               </button>
             </div>
 
-            <Link to="/signup">
+            <Link to="/register">
               <p>Not registered? Sign up now.</p>
             </Link>
           </form>
