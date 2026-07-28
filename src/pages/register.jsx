@@ -17,15 +17,18 @@ const Register = () => {
   async function handleSignUpSubmit(e) {
     e.preventDefault();
 
-    const res = await fetch("https://asna-backend.vercel.app/api/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, password }),
-    });
+    const res = await fetch(
+      "https://ai-eng-app-ap-is.vercel.app/api/auth/register",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password }),
+      },
+    );
 
     const data = res.json();
     if (res.status === 201) {
-      navigate("/dashboard");
+      navigate("/");
       toast.success("You are logged in successfully.");
     } else {
       setError(data.error || "Invalid credentials");
@@ -121,7 +124,7 @@ const Register = () => {
               </button>
             </div>
 
-            <Link to="/login">
+            <Link to="/">
               <p>Already have an account? Sign in.</p>
             </Link>
           </form>

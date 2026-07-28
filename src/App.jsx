@@ -3,6 +3,7 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Chat from './pages/chat'; 
 import { Authprovider } from "./context/AuthContext";
+import { ToastContainer } from "react-toastify";
 
 
 function App(){
@@ -10,10 +11,11 @@ function App(){
       <>
         <Authprovider>
           <Routes>
-            <Route path="/login" element={<Login />}></Route>
+            <Route path="/" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>
             <Route path="/chat" element={<Chat />}></Route>
           </Routes>
+          <ToastContainer />
         </Authprovider>
       </>
     );
