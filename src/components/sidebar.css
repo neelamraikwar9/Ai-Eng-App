@@ -1,0 +1,136 @@
+.sidebar {
+    background: #1b2430;
+    color: #f6f1e7;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    height: 100vh;
+}
+
+.sidebar-top {
+    margin-bottom: 20px;
+}
+
+.sidebar-title {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #f6f1e7;
+}
+
+.btn-new-entry {
+    background: transparent;
+    border: 1px solid rgba(184, 134, 59, 0.5);
+    color: #d9b676;
+    padding: 10px 14px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-family: "IBM Plex Mono", monospace;
+    text-align: left;
+    margin-bottom: 20px;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-new-entry:hover {
+    background: rgba(184, 134, 59, 0.1);
+    border-color: #b8863b;
+}
+
+.entry-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    overflow-y: auto;
+}
+
+.entry-empty {
+    font-size: 0.82rem;
+    color: rgba(246, 241, 231, 0.4);
+    line-height: 1.5;
+}
+
+.entry-item {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: rgba(246, 241, 231, 0.75);
+    text-align: left;
+    padding: 9px 8px;
+    border-radius: 3px;
+    font-size: 0.88rem;
+    transition: background 0.15s ease;
+}
+
+.entry-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.entry-item-active {
+    background: rgba(184, 134, 59, 0.15);
+    color: #f6f1e7;
+}
+
+.entry-index {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    color: #b8863b;
+}
+
+.entry-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sidebar-bottom {
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-initial {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #b8863b;
+    color: #1b2430;
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-name {
+    font-size: 0.85rem;
+    color: rgba(246, 241, 231, 0.85);
+}
+
+.btn-signout {
+    background: none;
+    border: none;
+    color: rgba(246, 241, 231, 0.4);
+    font-size: 0.78rem;
+    text-decoration: underline;
+}
+
+.btn-signout:hover {
+    color: #f6f1e7;
+}
+
+@media (max-width: 720px) {
+    .sidebar {
+        display: none;
+    }
+}
