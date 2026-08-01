@@ -1,0 +1,33 @@
+.chat-window {
+    flex: 1;
+    overflow-y: auto;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    background-image: repeating-linear-gradient(to bottom,
+            transparent,
+            transparent 42px,
+            rgba(180, 165, 130, 0.08) 43px);
+}
+
+.chat-window-empty {
+    align-items: center;
+    justify-content: center;
+    color: #9a9080;
+    text-align: center;
+    gap: 6px;
+}
+
+.empty-mark {
+    font-family: "Fraunces", serif;
+    font-size: 2.4rem;
+    color: #d9cdb0;
+    margin: 0;
+}
+
+@media (max-width: 720px) {
+    .chat-window {
+        padding: 24px 20px;
+    }
+}

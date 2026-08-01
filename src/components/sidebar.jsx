@@ -1,5 +1,5 @@
 import { useAuth } from "../context/AuthContext";
-import "./Sidebar.css";
+import "./sidebar.css";
 
 export default function Sidebar({
   conversations,
@@ -45,7 +45,7 @@ export default function Sidebar({
           <span className="user-initial">
             {user?.name?.[0]?.toUpperCase() || "?"}
           </span>
-          <span className="user-name">{user?.name}</span>
+          <span className="user-name">{user?.name || "Guest"}</span>
         </div>
         <button className="btn-signout" onClick={logout}>
           Sign out

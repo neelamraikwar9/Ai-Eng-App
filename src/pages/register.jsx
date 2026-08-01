@@ -1,17 +1,18 @@
+import "./register.css"; 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import "./login.css";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useAuth } from "../context/AuthContext";
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState();
+  const { login } = useAuth();
   const navigate = useNavigate();
-
   const [visible, setVisible] = useState(false);
 
   async function handleSignUpSubmit(e) {
@@ -26,13 +27,15 @@ const Register = () => {
       },
     );
 
-    const data = res.json();
+    const data = await res.json(); // ✅ await added
+
     if (res.status === 201) {
-      navigate("/");
-      toast.success("You are logged in successfully.");
+      login(data.token); // ✅ log the new user in immediately
+      navigate("/chat"); // ✅ send them to the chat page, not "/"
+      toast.success("Account created successfully.");
     } else {
-      setError(data.error || "Invalid credentials");
-      toast.error("Already have an account.");
+      setError(data.message || "Something went wrong");
+      toast.error(data.message || "Registration failed. Try again.");
     }
   }
 
@@ -105,7 +108,7 @@ const Register = () => {
                     ></i>
                   ) : (
                     <i
-                      class="bi bi-eye-slash"
+                      className="bi bi-eye-slash"
                       style={{
                         position: "absolute",
                         right: "0.1rem",

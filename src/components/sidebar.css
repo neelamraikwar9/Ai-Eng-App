@@ -12,10 +12,21 @@
     margin-bottom: 20px;
 }
 
+.eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #b8863b;
+    margin: 0 0 0.5rem 0;
+}
+
 .sidebar-title {
+    font-family: "Fraunces", Georgia, serif;
     font-size: 1.3rem;
     font-style: italic;
     color: #f6f1e7;
+    margin: 0;
 }
 
 .btn-new-entry {
@@ -28,6 +39,7 @@
     font-family: "IBM Plex Mono", monospace;
     text-align: left;
     margin-bottom: 20px;
+    cursor: pointer;
     transition: background 0.15s ease, border-color 0.15s ease;
 }
 
@@ -61,6 +73,7 @@
     padding: 9px 8px;
     border-radius: 3px;
     font-size: 0.88rem;
+    cursor: pointer;
     transition: background 0.15s ease;
 }
 
@@ -123,6 +136,7 @@
     color: rgba(246, 241, 231, 0.4);
     font-size: 0.78rem;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .btn-signout:hover {

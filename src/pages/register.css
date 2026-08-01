@@ -1,0 +1,145 @@
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(184, 134, 59, 0.08), transparent 40%),
+        #1b2430;
+    padding: 24px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.workasana {
+    font-family: "Fraunces", Georgia, serif;
+    font-style: italic;
+    color: #f6f1e7;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.loginCon {
+    background: #f6f1e7;
+    border-radius: 4px;
+    padding: 40px 44px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+    border-top: 3px solid #b8863b;
+}
+
+.loginCon h3 {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 500;
+    color: #23282f;
+    margin: 0;
+}
+
+.loginCon>p {
+    color: #6b6255;
+    margin: 10px 0 28px 0;
+    font-size: 0.92rem;
+}
+
+.fields form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.inpField {
+    display: flex;
+    flex-direction: column;
+}
+
+.lable {
+    font-size: 0.75rem;
+    font-family: "IBM Plex Mono", monospace;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #4a4438;
+    margin-bottom: 6px;
+}
+
+.inpFont {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    padding: 12px 14px;
+    border: 1px solid #e4dcc8;
+    border-radius: 3px;
+    background: #fffdf8;
+    color: #23282f;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.15s ease;
+}
+
+.inpFont:focus {
+    border-color: #b8863b;
+}
+
+.password {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password .inpFont {
+    padding-right: 40px;
+}
+
+.eyeBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b6255;
+    padding: 0;
+}
+
+.eyeBtn:hover {
+    color: #23282f;
+}
+
+.btnCon {
+    margin-top: 6px;
+}
+
+.btn {
+    width: 100%;
+    background: #1b2430;
+    color: #f6f1e7;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.btn:hover {
+    background: #2a3546;
+}
+
+.fields a {
+    text-decoration: none;
+}
+
+.fields a p {
+    margin-top: 20px;
+    font-size: 0.88rem;
+    color: #b8863b;
+    text-align: center;
+    font-weight: 600;
+}
+
+.fields a p:hover {
+    text-decoration: underline;
+}

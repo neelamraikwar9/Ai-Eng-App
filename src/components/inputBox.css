@@ -1,0 +1,58 @@
+.input-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 18px 60px 28px 60px;
+    border-top: 1px solid #e4dcc8;
+    background: #f6f1e7;
+}
+
+.input-box textarea {
+    flex: 1;
+    resize: none;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1.5px solid #b8863b;
+    background: transparent;
+    outline: none;
+    color: #23282f;
+    max-height: 160px;
+    font-family: "Inter", sans-serif;
+}
+
+.input-box textarea::placeholder {
+    color: #a89d88;
+    font-style: italic;
+}
+
+.input-box textarea:disabled {
+    opacity: 0.5;
+}
+
+.btn-send {
+    background: #1b2430;
+    color: #f6f1e7;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 3px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: background 0.15s ease;
+}
+
+.btn-send:hover:not(:disabled) {
+    background: #2a3546;
+}
+
+.btn-send:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+@media (max-width: 720px) {
+    .input-box {
+        padding: 14px 20px 20px 20px;
+    }
+}

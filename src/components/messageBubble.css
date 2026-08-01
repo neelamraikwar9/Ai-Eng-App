@@ -1,0 +1,80 @@
+.message-row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 18px;
+    max-width: 760px;
+}
+
+.message-row-ai {
+    align-self: flex-start;
+}
+
+.message-row-user {
+    align-self: flex-end;
+    margin-left: auto;
+    grid-template-columns: 1fr 90px;
+}
+
+.message-margin {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #b8863b;
+    padding-top: 14px;
+    text-align: right;
+    border-right: 1px solid #e4dcc8;
+    padding-right: 14px;
+}
+
+.message-row-user .message-margin {
+    order: 2;
+    text-align: left;
+    border-right: none;
+    border-left: 1px solid #e4dcc8;
+    padding-left: 14px;
+    padding-right: 0;
+}
+
+.message-bubble {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    padding: 14px 18px;
+    border-radius: 3px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.bubble-ai {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.9rem;
+    background: transparent;
+    color: #23282f;
+    padding-left: 0;
+}
+
+.bubble-user {
+    background: #fffdf8;
+    border: 1px solid #e4dcc8;
+    color: #23282f;
+}
+
+.cursor-blink {
+    display: inline-block;
+    animation: blink 1s steps(2) infinite;
+    color: #b8863b;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .message-row,
+    .message-row-user {
+        grid-template-columns: 60px 1fr;
+    }
+}
