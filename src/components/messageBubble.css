@@ -1,4 +1,4 @@
-.message-row {
+/* .message-row {
     display: grid;
     grid-template-columns: 90px 1fr;
     gap: 18px;
@@ -77,4 +77,4 @@
     .message-row-user {
         grid-template-columns: 60px 1fr;
     }
-}
+} */

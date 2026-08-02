@@ -1,0 +1,15 @@
+.MainContainer {
+    background-color: aqua;
+    display: flex; 
+    flex-direction: row;
+}
+
+.navbar {
+    width: 20%; 
+    background-color:aquamarine
+
+}
+
+.chatContainer {
+
+}

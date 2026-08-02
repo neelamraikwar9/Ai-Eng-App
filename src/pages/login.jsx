@@ -1,5 +1,4 @@
-// import "./login.css";
-import "./register.css"; 
+import "./login.css";
 // import "bootstrap-icons/font/bootstrap-icons.css";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
