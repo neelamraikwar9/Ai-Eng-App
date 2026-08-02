@@ -45,7 +45,7 @@ const Login = () => {
 
   return (
     <main>
-      <h2 className="textCenter workasana">Workasana</h2>
+      <h2 className="textCenter workasana">LinguaLeap</h2>
       <div className="loginCon">
         <h3 className="textCenter">Log in to your account</h3>
         <p className="textCenter">Please enter your details</p>

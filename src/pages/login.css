@@ -20,16 +20,10 @@
 
 }
 
-/* .passContainer{
-    border: 1px solid green;
-    width: 
-
-} */
 
 .password {
     position: relative;
-    /* display: inline-block; */
-    /* border: 1px solid green; */
+
 
 }
 
@@ -42,14 +36,7 @@ input {
 
 }
 
-/* .inpField { */
-/* border: 1px solid green;     */
-/* padding: 0.5rem; */
-/* display: flex; */
-/* flex-direction: column;  */
-/* gap : 0.1rem; */
 
-/* } */
 
 .lable {
     margin-right: 9.3rem;
