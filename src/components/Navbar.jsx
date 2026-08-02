@@ -14,14 +14,9 @@ function Navbar() {
 
           <ul className="listStyl">
             <li className="navItem">
-              //added to check
               <i
-                className="bi bi-telephone-fill hoverStyl"
-                style={{
-                  padding: "0",
-                  marginTop: "2rem",
-                  color: "greenyellow",
-                }}
+                class="bi bi-house-check-fill"
+                style={{ fontSize: "1.2rem" }}
               ></i>
               <NavLink to="/dashboard" className="navText">
                 Home
@@ -30,28 +25,29 @@ function Navbar() {
 
             <li className="navItem">
               <NavLink to="/project" className="navText">
+                <i class="bi bi-book-fill"></i>
                 Read Novels
               </NavLink>
             </li>
 
             <li className="navItem">
               <NavLink to="/team" className="navText">
+                <i class="bi bi-chat-dots-fill"></i>
                 Converse
               </NavLink>
             </li>
 
             <li className="navItem">
-              
               <NavLink to="/report" className="navText">
+                <i class="bi bi-book"></i>
                 Grammer Books
               </NavLink>
             </li>
 
             <li className="navItem">
-             
-            
               <NavLink to="/setting" className="navText">
-                User 
+                <i class="bi bi-person-circle"></i>
+                User
               </NavLink>
             </li>
           </ul>

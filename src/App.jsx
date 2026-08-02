@@ -4,6 +4,8 @@ import Register from "./pages/register";
 import Chat from './pages/chat'; 
 import { AuthProvider } from "./context/AuthContext";
 import { ToastContainer } from "react-toastify";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 
 
 function App(){
