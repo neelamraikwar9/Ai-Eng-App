@@ -1,5 +1,5 @@
 .MainContainer {
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex; 
     flex-direction: row;
 }
@@ -12,4 +12,26 @@
 
 .chatContainer {
     
+}
+
+.converse {
+    border: 1px solid green; 
+    width: 73rem; 
+    display: flex; 
+    padding-left: 11px;
+}
+
+.midChatCon {
+    margin-top: 10rem;
+}
+
+.typeInputCon {
+    border: 1px solid gold; 
+    margin-top: 2rem;
+}
+
+.inp{
+    width: 50rem; 
+    height: 2rem;
+    border-radius: 3rem;
 }
