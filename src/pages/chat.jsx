@@ -1,10 +1,12 @@
 import "./chat.css"; 
 import React from 'react'; 
 import Navbar  from "../components/Navbar"; 
-import 
+import { useAuth } from "../context/AuthContext";
 
 
 const chat = () => {
+  const { user, logout } = useAuth();
+  console.log(user, "user")
   return (
     <main className="MainContainer">
       <div className="navbar">
@@ -16,7 +18,7 @@ const chat = () => {
         </div>
 
         <div className="midChatCon">
-          <h2>Hi name</h2>
+          {/* <h2>Hi ${user ? user.name : user.name}</h2> */}
           <i>
             “You have to grow from the inside out. None can teach you, none can
             make you spiritual. There is no other teacher but your own soul.”
@@ -33,7 +35,7 @@ const chat = () => {
               placeholder="Type your message..."
               className="inp"
             />
-            <i class="bi bi-arrow-up-circle-fill promptSender"></i>
+            <i className="bi bi-arrow-up-circle-fill promptSender"></i>
           </div>
         </div>
       </div>
