@@ -1,6 +1,7 @@
 import "./chat.css"; 
 import React from 'react'; 
 import Navbar  from "../components/Navbar"; 
+import 
 
 
 const chat = () => {
@@ -21,9 +22,18 @@ const chat = () => {
             make you spiritual. There is no other teacher but your own soul.”
           </i>
           <br />
-          <div className="typeInputCon">
-          
-            <input type="text" className="inp" />
+          <div className="inputBox">
+            <i
+              className="bi bi-pen-fill pencilIcon"
+
+              // style={{position: "absolute", margin: "9px", marginLeft: "20px"}}
+            ></i>
+            <input
+              type="text"
+              placeholder="Type your message..."
+              className="inp"
+            />
+            <i class="bi bi-arrow-up-circle-fill promptSender"></i>
           </div>
         </div>
       </div>

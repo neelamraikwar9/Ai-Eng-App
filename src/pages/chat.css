@@ -25,13 +25,39 @@
     margin-top: 10rem;
 }
 
-.typeInputCon {
+.inputBox {
     border: 1px solid gold; 
     margin-top: 2rem;
+    position: relative;
+    width: 100%;
+}
+
+.pencilIcon {
+    position: absolute;
+    left: 205px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    /* background-color: aquamarine; */
 }
 
 .inp{
-    width: 50rem; 
-    height: 2rem;
-    border-radius: 3rem;
+     width: 50rem; 
+    height: 3rem;
+border-radius: 3rem;
+/*  margin-left: 8px;
+    border: none */
+ /* height: 50px; */
+    border: 2px solid #555;
+    /* This creates space for the pencil */
+    padding-left: 45px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.promptSender {
+    position: absolute;
+    top: 30%;
+    left: 60rem; 
+
 }
