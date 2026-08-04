@@ -23,26 +23,26 @@ function Navbar() {
               </NavLink>
             </li>
 
-            <li className="navItem">
+            {/* <li className="navItem">
               <NavLink to="/project" className="navText">
                 <i class="bi bi-book-fill"></i>
                 Read Novels
               </NavLink>
-            </li>
+            </li> */}
 
-            <li className="navItem">
+            {/* <li className="navItem">
               <NavLink to="/team" className="navText">
                 <i class="bi bi-chat-dots-fill"></i>
                 Converse
               </NavLink>
-            </li>
+            </li> */}
 
-            <li className="navItem">
+            {/* <li className="navItem">
               <NavLink to="/report" className="navText">
                 <i class="bi bi-book"></i>
                 Grammer Books
               </NavLink>
-            </li>
+            </li> */}
 
             <li className="navItem">
               <NavLink to="/setting" className="navText">
