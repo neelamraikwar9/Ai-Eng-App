@@ -15,7 +15,7 @@ function Navbar() {
           <ul className="listStyl">
             <li className="navItem">
               <i
-                class="bi bi-house-check-fill"
+                className="bi bi-house-check-fill"
                 style={{ fontSize: "1.2rem" }}
               ></i>
               <NavLink to="/dashboard" className="navText">
@@ -46,7 +46,7 @@ function Navbar() {
 
             <li className="navItem">
               <NavLink to="/setting" className="navText">
-                <i class="bi bi-person-circle"></i>
+                <i className="bi bi-person-circle"></i>
                 User
               </NavLink>
             </li>
