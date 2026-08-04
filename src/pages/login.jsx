@@ -30,8 +30,8 @@ const Login = () => {
     const data = await response.json();
     console.log(data);  
 
-    if (data.token) {
-      login(data.token);
+    if ((data.token)) {
+      login(data.token, { name: data.name, email: data.email, _id: data._id });
       navigate("/chat"); // Success, go to landing page
       toast.success("You are logged in successfully.");
     } else {

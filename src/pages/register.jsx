@@ -30,7 +30,7 @@ const Register = () => {
     const data = await res.json(); // ✅ await added
 
     if (res.status === 201) {
-      login(data.token); // ✅ log the new user in immediately
+      login(data.token, { name: data.name, email: data.email, _id: data._id }); // ✅ log the new user in immediately
       navigate("/chat"); // ✅ send them to the chat page, not "/"
       toast.success("Account created successfully.");
     } else {

@@ -4,7 +4,7 @@ import Navbar  from "../components/Navbar";
 import { useAuth } from "../context/AuthContext";
 
 
-const chat = () => {
+const Chat = (  ) => {
   const { user, logout } = useAuth();
   console.log(user, "user")
   return (
@@ -18,7 +18,7 @@ const chat = () => {
         </div>
 
         <div className="midChatCon">
-          {/* <h2>Hi ${user ? user.name : user.name}</h2> */}
+          <h2>Hi {user?.name}</h2>
           <i>
             “You have to grow from the inside out. None can teach you, none can
             make you spiritual. There is no other teacher but your own soul.”
@@ -43,4 +43,4 @@ const chat = () => {
   );
 }
 
-export default chat
+export default Chat
